@@ -1,10 +1,22 @@
 <html>
+<head>
+<script>
+   function postTes(){
+        alert("start!");
+        setTimeout(()=>{
+            window.postMessage("cookies: test");
+        },1000);
+        alert("end!");
+   }
+</script>
+
 <body>
 <button onclick='window.postMessage("testPostMsg")'> postMessage test</button>
 <button onclick='window.opener.postMessage("testPostMsg","https://gr-masui.github.io")'> postMessage test opener</button>
 <button onclick='setTimeout(window.postMessage("testPostMsg"),1000)'> postMessage timeout</button>
 <button onclick='setTimeout(window.opener.postMessage("testPostMsg","https://gr-masui.github.io"),1000)'> postMessage opener timeout</button>
 <button onclick='alert("testkey")'> click test</button>
+<button onclick='postTes()'>postTes</button>
 </body>
 </body>
 
