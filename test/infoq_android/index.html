@@ -8,11 +8,19 @@
         },1000);
         alert("end!");
    }
+      function closeWebview2(){
+        alert("start!");
+        setTimeout(()=>{
+            window.ReactNativeWebView.postMessage("close_webview");
+        },1000);
+        alert("end!");
+   }
 </script>
 
 <body>
 <button onclick='alert("test")'> click alert test</button>
 <button onclick='closeWebview()'>closeWebview</button>
+   <button onclick='closeWebview2()'>closeWebview2</button>
 </body>
 </body>
 
